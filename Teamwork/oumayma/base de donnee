@@ -14,7 +14,7 @@ total_spent INT( 11 ),
 total_earned INT( 11 ),
 PRIMARY KEY ( id_utilisateur ),
 UNIQUE ( email )
-)
+);
 
 
 insert into Utilisateur (nom_utilisateur,email,mot_de_passe) values('iliass' ,'iliass@gmail.com',MD5('iliass')) ;
