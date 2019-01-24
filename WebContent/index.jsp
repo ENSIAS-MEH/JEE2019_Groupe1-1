@@ -19,7 +19,7 @@
 
     <title>Business Casual - Start Bootstrap Theme</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS --> 
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
