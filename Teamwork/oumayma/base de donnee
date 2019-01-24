@@ -1,0 +1,24 @@
+Create table Utilisateur (
+id_utilisateur INT( 11 ) NOT NULL AUTO_INCREMENT ,
+nom_utilisateur VARCHAR( 60 ) NOT NULL ,
+email VARCHAR( 60 ) NOT NULL ,
+mot_de_passe VARCHAR( 60 ) NOT NULL ,
+pseudo VARCHAR( 60 )  ,
+adresse VARCHAR( 60 )  ,
+pays VARCHAR( 60 )  ,
+code_postal INT( 11 ),
+type_contenu VARCHAR( 60 ) ,
+lien VARCHAR( 60 ) ,
+about_me VARCHAR( 90 ) ,
+total_spent INT( 11 ),
+total_earned INT( 11 ),
+PRIMARY KEY ( id_utilisateur ),
+UNIQUE ( email )
+)
+
+
+insert into Utilisateur (nom_utilisateur,email,mot_de_passe) values('iliass' ,'iliass@gmail.com',MD5('iliass')) ;
+insert into Utilisateur (nom_utilisateur,email,mot_de_passe) values('oumayma' ,'oumayma@gmail.com',MD5('iliass')) ;
+insert into Utilisateur (nom_utilisateur,email,mot_de_passe) values('amine' ,'amine@gmail.com',MD5('iliass')) ;
+insert into Utilisateur (nom_utilisateur,email,mot_de_passe) values('khadija' ,'khadija@gmail.com',MD5('khadija')) ;
+
