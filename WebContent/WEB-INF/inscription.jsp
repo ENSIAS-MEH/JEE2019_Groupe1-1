@@ -1,3 +1,6 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,27 +23,33 @@
              <!-- <img src="images/signup-bg.jpg" alt=""> --> 
             <div class="container">
                 <div class="signup-content">
-                    <form method="GET" id="signup-form" class="signup-form" action="InscriptionUtilisateur">
+                    <form method="post" id="signup-form" class="signup-form" action="inscription">
                         <h2 class="form-title">Create account</h2>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="name" id="name" placeholder="Your Name"/>
+                            <input type="text" class="form-input" name="nom" id="nom" value="<c:out value="${utilisateur.nom}"/>" placeholder="Your Name"/>
+                            <span class="erreur">${form.erreurs['nom']}</span>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
+                            <input type="email" class="form-input" name="email" id="email" value="<c:out value="${utilisateur.email}"/>" placeholder="Your Email"/>
+                            <span class="erreur">${form.erreurs['email']}</span>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="password" id="password" placeholder="Password"/>
+                            <input type="text" class="form-input" name="motdepasse" id="motdepasse" value="" placeholder="Password"/>
                             <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                            <span class="erreur">${form.erreurs['motdepasse']}</span>
+                            
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-input" name="re_password" id="re_password" placeholder="Repeat your password"/>
+                            <input type="password" class="form-input" name="confirmation" id="confirmation" value="" placeholder="Repeat your password"/>
+                            <span class="erreur">${form.erreurs['confirmation']}</span>
                         </div>
                         <div class="form-group">
                             <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
                             <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                         </div>
                         <div class="form-group">
-                        	<input type="submit" value="Submit">
+                            <input type="submit" value="Inscription" class="btn btn-primary btn-xl"  />
+                        	
                         </div>
 
                     </form>
