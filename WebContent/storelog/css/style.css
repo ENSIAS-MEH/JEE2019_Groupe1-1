@@ -358,6 +358,4 @@ input[type=checkbox]:not(old):checked + label > span:before {
 
 /*# sourceMappingURL=style.css.map */
 
-form .erreur {
-    color: #900;
-}
+

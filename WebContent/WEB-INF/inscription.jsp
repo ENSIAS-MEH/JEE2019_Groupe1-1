@@ -14,6 +14,8 @@
 
     <!-- Main css -->
     <link rel="stylesheet" href="storelog/css/style.css">
+    
+     <link type="text/css" rel="stylesheet" href="inc/form12.css" />
 </head>
 <body>
 
@@ -34,7 +36,7 @@
                             <span class="erreur">${form.erreurs['email']}</span>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="motdepasse" id="motdepasse" value="" placeholder="Password"/>
+                            <input type="password" class="form-input" name="motdepasse" id="motdepasse" value="" placeholder="Password"/>
                             <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
                             <span class="erreur">${form.erreurs['motdepasse']}</span>
                             
@@ -48,13 +50,21 @@
                             <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Inscription" class="btn btn-primary btn-xl"  />
-                        	
+                         <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up"/>
+                            
+                        	<p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
+                        	<%-- Cette balise affichera le mot 'test' si le bean n'existe pas : --%>
+                            
+						
+									
+                         <c:if test="${form.resultat == 'Succès de l inscription.' }">
+                            <meta http-equiv="refresh" content="2; URL=http://localhost:8080/JEE2019_Groupe1-1/connexion" >
+                         </c:if>
                         </div>
 
                     </form>
-                    <p class="loginhere">
-                        Have already an account ? <a href="login.html" class="loginhere-link">Login</a>
+                   <p class="loginhere">
+                        Have already an account ? <a href="#" class="loginhere-link">Login here</a>
                     </p>
                     
                 </div>

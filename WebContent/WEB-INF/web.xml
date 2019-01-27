@@ -11,7 +11,10 @@
 	</servlet>
 	
   
-
+<servlet>
+	<servlet-name>Connexion</servlet-name>
+	<servlet-class>com.projet.servlets.Connexion</servlet-class>
+  </servlet>
 
 
 <listener>
@@ -22,7 +25,10 @@
 
 
 
-  
+  <servlet-mapping>
+	<servlet-name>Connexion</servlet-name>
+	<url-pattern>/connexion</url-pattern>
+  </servlet-mapping>
 
 	<servlet-mapping>
 		<servlet-name>Inscription</servlet-name>
