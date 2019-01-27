@@ -1,3 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,11 +26,9 @@
   <body>
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-upper text-primary mb-3">test</span>
+      <span class="site-heading-upper text-primary mb-3">welcome</span>
       <span class="site-heading-lower">hello</span>
     </h1>
-   
-                
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -41,22 +40,29 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="index.html">Home
+              <a class="nav-link text-uppercase text-expanded" href="#">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
+              <a class="nav-link text-uppercase text-expanded" href="pagecreateur.html">ma page</a>
+            </li>            
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="dashboard.html">Dashboard</a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="products.html">Projets</a>
+              <a class="nav-link text-uppercase text-expanded" href="products2.html">explorer</a>
+            </li>            
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="user.html">mon profile</a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="inscription">Inscription</a>
+              <a class="nav-link text-uppercase text-expanded" href="table.html">table list</a>
             </li>
-             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="connexion">Connexion</a>
-            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="index.html">se déconnecter</a>
+            </li>            
+            
           </ul>
         </div>
       </div>
@@ -68,13 +74,13 @@
           <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/intro.jpg" alt="">
           <div class="intro-text left-0 text-center bg-faded p-5 rounded">
             <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">aider</span>
-              <span class="section-heading-lower">Le don : meilleur moyen de soutenir un créateur que l’on apprécie.</span>
+              <span class="section-heading-upper">my page</span>
+              <span class="section-heading-lower">acceuil</span>
             </h2>
             <p class="mb-3">text descripitf
             </p>
             <div class="intro-button mx-auto">
-              <a class="btn btn-primary btn-xl" href="#">aider :)</a>
+              <a class="btn btn-primary btn-xl" href="#">creer</a>
             </div>
           </div>
         </div>

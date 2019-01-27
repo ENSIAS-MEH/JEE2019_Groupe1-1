@@ -16,6 +16,19 @@
 	<servlet-class>com.projet.servlets.Connexion</servlet-class>
   </servlet>
 
+<servlet>
+	<servlet-name>Deconnexion</servlet-name>
+	<servlet-class>com.projet.servlets.Deconnexion</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>Restriction</servlet-name>
+	<servlet-class>com.projet.servlets.Restriction</servlet-class>
+</servlet>
+
+
+
+
 
 <listener>
 
@@ -23,6 +36,18 @@
 
 </listener>
 
+
+
+
+<servlet-mapping>
+	<servlet-name>Restriction</servlet-name>
+	<url-pattern>/restriction</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Deconnexion</servlet-name>
+	<url-pattern>/deconnexion</url-pattern>
+</servlet-mapping>
 
 
   <servlet-mapping>
