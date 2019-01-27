@@ -3,8 +3,30 @@ package com.iliass.models;
 public class Publication {
 	
 	int idPublication ;
+	int idPublisher ;
 	String titre ;
 	String Description ;
+	String URL ;
+	int publicPost ;
+	
+	public int getIdPublisher() {
+		return idPublisher;
+	}
+	public void setIdPublisher(int idPublisher) {
+		this.idPublisher = idPublisher;
+	}
+	public String getURL() {
+		return URL;
+	}
+	public void setURL(String uRL) {
+		URL = uRL;
+	}
+	public int getPublicPost() {
+		return publicPost;
+	}
+	public void setPublicPost(int publicPost) {
+		this.publicPost = publicPost;
+	}
 	public int getIdPublication() {
 		return idPublication;
 	}
@@ -25,9 +47,10 @@ public class Publication {
 	}
 	@Override
 	public String toString() {
-		return "Publication [idPublication=" + idPublication + ", titre=" + titre + ", Description=" + Description
-				+ "]";
+		return "Publication [idPublication=" + idPublication + ", idPublisher=" + idPublisher + ", titre=" + titre
+				+ ", Description=" + Description + ", URL=" + URL + ", publicPost=" + publicPost + "]";
 	}
+	
 	
 	
 	
