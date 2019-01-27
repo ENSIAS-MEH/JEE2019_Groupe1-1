@@ -31,9 +31,11 @@ create table Postes(
   id_posteur INT( 11 ) NOT NULL ,
   Titre VARCHAR( 30 ),
   Description VARCHAR( 90 ), 
+  URL VARCHAR( 30 ) ,
   public int DEFAULT  1,
   Date_creation_Post datetime DEFAULT NOW() ,
   primary key (id_poste),
   CONSTRAINT fk_Utilisateur_idUtilisateur3 foreign key (id_posteur) references Utilisateur(id_utilisateur)
 ) ;
+
 
