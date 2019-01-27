@@ -30,7 +30,10 @@ create table Postes(
   id_Poste INT( 11 ) NOT NULL AUTO_INCREMENT,
   id_posteur INT( 11 ) NOT NULL ,
   Titre VARCHAR( 30 ),
-  Description VARCHAR( 90 ),
+  Description VARCHAR( 90 ), 
+  public int DEFAULT  1,
+  Date_creation_Post datetime DEFAULT NOW() ,
   primary key (id_poste),
   CONSTRAINT fk_Utilisateur_idUtilisateur3 foreign key (id_posteur) references Utilisateur(id_utilisateur)
 ) ;
+
