@@ -1,3 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,41 +77,8 @@
               <span class="section-heading-upper">my page</span>
               <span class="section-heading-lower">acceuil</span>
             </h2>
-         <form action="" method="post" enctype="multipart/form-data">
-        
-        <div class="form-group">
-        </div>
-         
-        <div class="form-group">
-             <input type="text" class="form-input" name="titre"  placeholder="titre pub"/>
-        </div>
-        <br /> 
-           <p>
-             
-             <textarea name="ameliorer" id="ameliorer" placeholder="Exprimez vous"></textarea>
-           </p>
-         <br />  
-           
-            <fieldset>
-                <br />
-
-                <label for="fichier">Emplacement du fichier <span class="requis">*</span></label>
-                <input type="file" id="fichier" name="fichier" />
-                <br />
-                                
-            </fieldset>
-            <br />
-            <input type="url" placeholder="http://" />
-             <p>
-       qui peut voir la pub<br />
-            <input type="radio" name="rad" value="priv" id="priv" /> <label for="priv">Seuls abonnés</label><br />
-            <input type="radio" name="rad" value="pub" id="pub" /> <label for="priv">Tout le monde</label><br />
-       
-             </p>
-             
-             
-            
-        </form> 
+            <p class="mb-3">text descripitf
+            </p>
             <div class="intro-button mx-auto">
               <a class="btn btn-primary btn-xl" href="#">creer</a>
             </div>

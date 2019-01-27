@@ -1,3 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,9 +26,11 @@
   <body>
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-upper text-primary mb-3">welcome</span>
+      <span class="site-heading-upper text-primary mb-3">test</span>
       <span class="site-heading-lower">hello</span>
     </h1>
+   
+                
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -39,29 +42,22 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="#">Home
+              <a class="nav-link text-uppercase text-expanded" href="index.html">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="pagecreateur.html">ma page</a>
-            </li>            
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="dashboard.html">Dashboard</a>
+              <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="products2.html">explorer</a>
-            </li>            
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="user.html">mon profile</a>
+              <a class="nav-link text-uppercase text-expanded" href="products.html">Projets</a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="table.html">table list</a>
+              <a class="nav-link text-uppercase text-expanded" href="inscription">Inscription</a>
             </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="index.html">se déconnecter</a>
-            </li>            
-            
+             <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="connexion">Connexion</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -73,46 +69,13 @@
           <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/intro.jpg" alt="">
           <div class="intro-text left-0 text-center bg-faded p-5 rounded">
             <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">my page</span>
-              <span class="section-heading-lower">acceuil</span>
+              <span class="section-heading-upper">aider</span>
+              <span class="section-heading-lower">Le don : meilleur moyen de soutenir un créateur que l’on apprécie.</span>
             </h2>
-         <form action="" method="post" enctype="multipart/form-data">
-        
-        <div class="form-group">
-        </div>
-         
-        <div class="form-group">
-             <input type="text" class="form-input" name="titre"  placeholder="titre pub"/>
-        </div>
-        <br /> 
-           <p>
-             
-             <textarea name="ameliorer" id="ameliorer" placeholder="Exprimez vous"></textarea>
-           </p>
-         <br />  
-           
-            <fieldset>
-                <br />
-
-                <label for="fichier">Emplacement du fichier <span class="requis">*</span></label>
-                <input type="file" id="fichier" name="fichier" />
-                <br />
-                                
-            </fieldset>
-            <br />
-            <input type="url" placeholder="http://" />
-             <p>
-       qui peut voir la pub<br />
-            <input type="radio" name="rad" value="priv" id="priv" /> <label for="priv">Seuls abonnés</label><br />
-            <input type="radio" name="rad" value="pub" id="pub" /> <label for="priv">Tout le monde</label><br />
-       
-             </p>
-             
-             
-            
-        </form> 
+            <p class="mb-3">text descripitf
+            </p>
             <div class="intro-button mx-auto">
-              <a class="btn btn-primary btn-xl" href="#">creer</a>
+              <a class="btn btn-primary btn-xl" href="#">aider :)</a>
             </div>
           </div>
         </div>

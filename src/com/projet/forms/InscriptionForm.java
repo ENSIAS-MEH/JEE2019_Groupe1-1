@@ -49,7 +49,7 @@ public final class InscriptionForm {
 
         if ( erreurs.isEmpty() ) {
             utilisateurDao.creer( utilisateur );
-            resultat = "Succès de l'inscription.";
+            resultat = "Succès de l inscription.";
         } else {
             resultat = "Échec de l'inscription.";
         }

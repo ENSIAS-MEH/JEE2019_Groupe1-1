@@ -11,6 +11,22 @@
 	</servlet>
 	
   
+<servlet>
+	<servlet-name>Connexion</servlet-name>
+	<servlet-class>com.projet.servlets.Connexion</servlet-class>
+  </servlet>
+
+<servlet>
+	<servlet-name>Deconnexion</servlet-name>
+	<servlet-class>com.projet.servlets.Deconnexion</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>Restriction</servlet-name>
+	<servlet-class>com.projet.servlets.Restriction</servlet-class>
+</servlet>
+
+
 
 
 
@@ -22,7 +38,22 @@
 
 
 
-  
+
+<servlet-mapping>
+	<servlet-name>Restriction</servlet-name>
+	<url-pattern>/restriction</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Deconnexion</servlet-name>
+	<url-pattern>/deconnexion</url-pattern>
+</servlet-mapping>
+
+
+  <servlet-mapping>
+	<servlet-name>Connexion</servlet-name>
+	<url-pattern>/connexion</url-pattern>
+  </servlet-mapping>
 
 	<servlet-mapping>
 		<servlet-name>Inscription</servlet-name>
