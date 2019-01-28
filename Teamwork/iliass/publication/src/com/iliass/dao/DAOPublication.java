@@ -28,6 +28,9 @@ public class DAOPublication {
 				publication.setIdPublication(rs.getInt("id_Poste"));
 				publication.setTitre(rs.getString("Titre"));
 				publication.setDescription(rs.getString("Description"));
+				publication.setIdPublisher(rs.getInt("id_posteur"));
+				publication.setURL(rs.getString("URL"));
+				publication.setPublicPost(rs.getInt("public"));
 				
 				listPosts.add(publication) ;
  			}
