@@ -51,7 +51,6 @@ public final class ConnexionForm {
         } else {
             resultat = "Échec de la connexion.";
         }
-
         return utilisateur;
     }
 

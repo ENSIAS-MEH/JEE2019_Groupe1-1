@@ -1,4 +1,7 @@
 <%@ page pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,7 +63,7 @@
               <a class="nav-link text-uppercase text-expanded" href="table.html">table list</a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="index.html">se déconnecter</a>
+              <a class="nav-link text-uppercase text-expanded" href="deconnexion">se déconnecter</a>
             </li>            
             
           </ul>

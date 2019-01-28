@@ -21,12 +21,12 @@
 	<servlet-class>com.projet.servlets.Deconnexion</servlet-class>
 </servlet>
 
+
+
 <servlet>
 	<servlet-name>Restriction</servlet-name>
 	<servlet-class>com.projet.servlets.Restriction</servlet-class>
 </servlet>
-
-
 
 
 
@@ -35,9 +35,6 @@
     <listener-class>com.projet.config.InitialisationDaoFactory</listener-class>
 
 </listener>
-
-
-
 
 <servlet-mapping>
 	<servlet-name>Restriction</servlet-name>
