@@ -26,6 +26,16 @@ create table Sabonner(
 );
 
 
+create table AimerPoste(
+  id_utilisateur int NOT NULL,
+  id_Poste int NOT NULL,
+  Date_aimer_poste datetime DEFAULT NOW() ,
+  primary key (id_utilisateur , id_Poste) ,
+  CONSTRAINT fk_Utilisateur_idUtilisateur4 foreign key (id_utilisateur) references Utilisateur(id_utilisateur) ,
+  CONSTRAINT fk_Postes_idPoste foreign key (id_Poste) references Postes(id_Poste)
+);
+
+
 create table Postes(
   id_Poste INT( 11 ) NOT NULL AUTO_INCREMENT,
   id_posteur INT( 11 ) NOT NULL ,
@@ -37,5 +47,7 @@ create table Postes(
   primary key (id_poste),
   CONSTRAINT fk_Utilisateur_idUtilisateur3 foreign key (id_posteur) references Utilisateur(id_utilisateur)
 ) ;
+
+
 
 
