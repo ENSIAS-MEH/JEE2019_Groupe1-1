@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.projet.beans.Utilisateur;
 import com.projet.dao.DAOFactory;
@@ -17,6 +18,9 @@ public class Inscription extends HttpServlet {
     public static final String ATT_USER         = "utilisateur";
     public static final String ATT_FORM         = "form";
     public static final String VUE              = "/WEB-INF/inscription.jsp";
+    public static final String VUE_INFO         = "/info";
+    public static final String ATT_SESSION_USER = "sessionUtilisateur";
+
 
     private UtilisateurDao     utilisateurDao;
 
@@ -32,15 +36,16 @@ public class Inscription extends HttpServlet {
 
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
         /* Préparation de l'objet formulaire */
+    	HttpSession session = request.getSession();
         InscriptionForm form = new InscriptionForm( utilisateurDao );
-
+        
         /* Traitement de la requête et récupération du bean en résultant */
         Utilisateur utilisateur = form.inscrireUtilisateur( request );
 
         /* Stockage du formulaire et du bean dans l'objet request */
         request.setAttribute( ATT_FORM, form );
         request.setAttribute( ATT_USER, utilisateur );
-
-        this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+        session.setAttribute( ATT_SESSION_USER, utilisateur );
+        response.sendRedirect( request.getContextPath() + VUE_INFO );  
     }
 }

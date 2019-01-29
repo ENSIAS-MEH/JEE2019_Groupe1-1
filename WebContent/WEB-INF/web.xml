@@ -33,12 +33,22 @@
 	<servlet-class>com.projet.servlets.User</servlet-class>
 </servlet>
 
+<servlet>
+		<servlet-name>Info</servlet-name>
+		<servlet-class>com.projet.servlets.Info</servlet-class>
+	</servlet>
 
 <listener>
 
     <listener-class>com.projet.config.InitialisationDaoFactory</listener-class>
 
 </listener>
+
+
+<servlet-mapping>
+	<servlet-name>Info</servlet-name>
+	<url-pattern>/info</url-pattern>
+</servlet-mapping>
 
 <servlet-mapping>
 	<servlet-name>User</servlet-name>

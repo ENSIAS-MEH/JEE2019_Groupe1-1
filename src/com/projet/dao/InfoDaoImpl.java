@@ -1,3 +1,4 @@
+
 package com.projet.dao;
 
 import java.sql.Connection;
@@ -8,16 +9,13 @@ import static com.projet.dao.DAOUtilitaire.*;
 
 import com.projet.beans.Utilisateur;
 
-public class UtilisateurDaoImpl implements UtilisateurDao {
+public class InfoDaoImpl implements InfoDao {
 	
 	private DAOFactory      daoFactory;
 	
 	private static final String SQL_SELECT_PAR_EMAIL = "SELECT id_utilisateur, email, nom, mot_de_passe, date_inscription FROM Utilisateur WHERE email = ?";
 	private static final String SQL_INSERT = "INSERT INTO Utilisateur (email, mot_de_passe, nom, date_inscription) VALUES (?, ?, ?, NOW())";
-	private static final String SQL_INSERT_Info = "UPDATE Utilisateur SET pseudo =? , adresse =?, pays= ?, code_postal =?,type_contenu=?, lien = ?, about_me = ? WHERE email = ?";
-			   
-			       
-   
+	   
 	UtilisateurDaoImpl( DAOFactory daoFactory ) {
 	        this.daoFactory = daoFactory;
 	        
@@ -122,41 +120,6 @@ public class UtilisateurDaoImpl implements UtilisateurDao {
 
         }
     }
-    
-    public void ajouter (Utilisateur utilisateur) throws DAOException {
-    	Connection connexion = null;
-
-        PreparedStatement preparedStatement = null;
-
-        ResultSet valeursAutoGenerees = null;
-
-
-        try {
-
-            /* Récupération d'une connexion depuis la Factory */
-
-            connexion = daoFactory.getConnection();
-
-            preparedStatement = initialisationRequetePreparee( connexion, SQL_INSERT_Info, false, utilisateur.getPseudo(), utilisateur.getAdresse(), utilisateur.getPays(),utilisateur.getCode_postal(),utilisateur.getType_contenu(), utilisateur.getLien(), utilisateur.getAbout_me(), utilisateur.getEmail() );
-
-            int statut = preparedStatement.executeUpdate();
-
-           
-           
-          
-
-        } catch ( SQLException e ) {
-
-            throw new DAOException( e );
-
-        } finally {
-
-            fermeturesSilencieuses( valeursAutoGenerees, preparedStatement, connexion );
-
-        }
-    	
-    }
-
     
     private static Utilisateur map( ResultSet resultSet ) throws SQLException {
 

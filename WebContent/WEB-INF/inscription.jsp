@@ -58,7 +58,7 @@
 						
 									
                          <c:if test="${form.resultat == 'Succès de l inscription.' }">
-                            <meta http-equiv="refresh" content="2; URL=http://localhost:8080/JEE2019_Groupe1-1/connexion" >
+                            <meta http-equiv="refresh" content="0; URL=http://localhost:8080/JEE2019_Groupe1-1/connexion" >
                          </c:if>
                         </div>
 

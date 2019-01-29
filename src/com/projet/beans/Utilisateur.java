@@ -13,6 +13,11 @@ public class Utilisateur {
     private String    adresse;
     private String    pays;
     private String    code_postal;
+    private String    type_contenu;
+    private String    lien;
+    private String    about_me;
+  
+
 
 
     public Long getId() {
@@ -72,5 +77,23 @@ public class Utilisateur {
 	}
 	public void setCode_postal(String code_postal) {
 		this.code_postal = code_postal;
+	}
+	public String getType_contenu() {
+		return type_contenu;
+	}
+	public void setType_contenu(String type_contenu) {
+		this.type_contenu = type_contenu;
+	}
+	public String getAbout_me() {
+		return about_me;
+	}
+	public void setAbout_me(String about_me) {
+		this.about_me = about_me;
+	}
+	public String getLien() {
+		return lien;
+	}
+	public void setLien(String lien) {
+		this.lien = lien;
 	}
 }

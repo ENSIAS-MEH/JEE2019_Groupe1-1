@@ -26,35 +26,35 @@
                     <form method="POST" id="signup-form" class="signup-form">
                         <h2 class="form-title">vos infos !</h2>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="name" id="name" placeholder="Pseudo"/>
+                            <input type="text" class="form-input" name="pseudo" id="pseudo" placeholder="Pseudo"/>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="password" id="password" placeholder="Adresse"/>                  
+                            <input type="text" class="form-input" name="adresse" id="adresse" placeholder="Adresse"/>                  
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="password" id="password" placeholder="Pays"/>                  
+                            <input type="text" class="form-input" name="pays" id="pays" placeholder="Pays"/>                  
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="password" id="password" placeholder="Code postal"/>                  
+                            <input type="text" class="form-input" name="code_postal" id="code_postal" placeholder="Code postal"/>                  
                         </div>                                                                        
                         <div class="form-group">
-                            <input type="email" class="form-input" name="email" id="email" placeholder="Type de contenu"/>
+                            <input type="text" class="form-input" name="type_contenu" id="type_contenu" placeholder="Type de contenu"/>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="password" id="password" placeholder="Lien vers votre hub de contenu principal"/>                  
+                            <input type="text" class="form-input" name="lien" id="lien" placeholder="Lien vers votre hub de contenu principal"/>                  
                         </div>                        
                         <div class="form-group">
-                            <input type="text" class="form-input" name="password" id="password" placeholder="A propos de vous"/>                  
+                            <input type="text" class="form-input" name="about_me" id="about_me" placeholder="A propos de vous"/>                  
                         </div>
                         <div class="form-group">
                             <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
                             <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                         </div>
-
+						<div class="form-group">
+                         <input type="submit" name="submit" id="submit" class="form-submit" value="Confirmer"/>
+                         </div>
                     </form>
-                    <p class="loginhere">
-                        creer ma page <a href="store1.html" class="loginhere-link">c'est parti</a>
-                    </p>
+                    
                     
                 </div>
             </div>
