@@ -28,6 +28,10 @@
 	<servlet-class>com.projet.servlets.Restriction</servlet-class>
 </servlet>
 
+<servlet>
+	<servlet-name>User</servlet-name>
+	<servlet-class>com.projet.servlets.User</servlet-class>
+</servlet>
 
 
 <listener>
@@ -35,6 +39,11 @@
     <listener-class>com.projet.config.InitialisationDaoFactory</listener-class>
 
 </listener>
+
+<servlet-mapping>
+	<servlet-name>User</servlet-name>
+	<url-pattern>/user</url-pattern>
+</servlet-mapping>
 
 <servlet-mapping>
 	<servlet-name>Restriction</servlet-name>

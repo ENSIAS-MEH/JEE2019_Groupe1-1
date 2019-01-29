@@ -12,7 +12,7 @@ public class UtilisateurDaoImpl implements UtilisateurDao {
 	
 	private DAOFactory      daoFactory;
 	
-	private static final String SQL_SELECT_PAR_EMAIL = "SELECT id, email, nom, mot_de_passe, date_inscription FROM Utilisateur WHERE email = ?";
+	private static final String SQL_SELECT_PAR_EMAIL = "SELECT id_utilisateur, email, nom, mot_de_passe, date_inscription FROM Utilisateur WHERE email = ?";
 	private static final String SQL_INSERT = "INSERT INTO Utilisateur (email, mot_de_passe, nom, date_inscription) VALUES (?, ?, ?, NOW())";
 	   
 	UtilisateurDaoImpl( DAOFactory daoFactory ) {
@@ -124,7 +124,7 @@ public class UtilisateurDaoImpl implements UtilisateurDao {
 
         Utilisateur utilisateur = new Utilisateur();
 
-        utilisateur.setId( resultSet.getLong( "id" ) );
+        utilisateur.setId( resultSet.getLong( "id_utilisateur" ) );
 
         utilisateur.setEmail( resultSet.getString( "email" ) );
 

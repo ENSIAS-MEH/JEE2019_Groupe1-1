@@ -1,3 +1,6 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -43,7 +46,7 @@
                         <span class="icon-bar bar2"></span>
                         <span class="icon-bar bar3"></span>
                     </button>
-                    <a class="navbar-brand" href="#">User Profile</a>
+                    <a class="navbar-brand" href="#">${sessionScope.sessionUtilisateur.nom}' Profile</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -146,22 +149,17 @@
                             <div class="content">
                                 <form>
                                     <div class="row">
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label>Company</label>
-                                                <input type="text" class="form-control border-input" disabled placeholder="Company" value="Creative Code Inc.">
-                                            </div>
-                                        </div>
+                                        
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Pseudo</label>
-                                                <input type="text" class="form-control border-input" placeholder="Username" value="michael23">
+                                                <input type="text" class="form-control border-input" placeholder="Username" >
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" class="form-control border-input" placeholder="Email">
+                                                <input type="email" class="form-control border-input" placeholder="Email" value="${sessionScope.sessionUtilisateur.email}">
                                             </div>
                                         </div>
                                     </div>
@@ -244,7 +242,7 @@
         </footer>
 
     </div>
-</div>
+
 
 
 </body>

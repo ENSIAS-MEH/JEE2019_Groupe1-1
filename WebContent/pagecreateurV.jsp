@@ -1,3 +1,5 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,6 +69,7 @@
       </div>
     </nav>
 
+<c:forEach var="i" begin="0" end="${listPubs.size() - 1}" step="1">
 
     <section class="page-section">
       <div class="container">
@@ -74,15 +77,15 @@
           <div class="product-item-title d-flex">
             <div class="bg-faded p-5 d-flex ml-auto rounded">
               <h2 class="section-heading mb-0">
-                <span class="section-heading-upper">1er pub</span>
-                <span class="section-heading-lower">nom</span>
+                <span class="section-heading-upper">Createur ${i + 1 } </span>
+                <span class="section-heading-lower">${listPubs.get(i).getTitre() }</span>
               </h2>
             </div>
           </div>
           <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-01.jpg" alt="">
           <div class="product-item-description d-flex mr-auto">
             <div class="bg-faded p-5 rounded">
-              <p class="mb-0">We take pride in our work, and it shows. Every time you order a beverage from us, we guarantee that it will be an experience worth having. Whether it's our world famous Venezuelan Cappuccino, a refreshing iced herbal tea, or something as simple as a cup of speciality sourced black coffee, you will be coming back for more.</p>
+              <p class="mb-0">${listPubs.get(1).getDescription() }</p>
               <div class="intro-button mx-auto">
               	<a class="btn btn-primary btn-xl" href="#">j'aime</a>
               </div>
@@ -96,62 +99,8 @@
       </div>
     </section>
 
-    <section class="page-section">
-      <div class="container">
-        <div class="product-item">
-          <div class="product-item-title d-flex">
-            <div class="bg-faded p-5 d-flex mr-auto rounded">
-              <h2 class="section-heading mb-0">
-                <span class="section-heading-upper">2eme pub</span>
-                <span class="section-heading-lower">name &amp; Kitchen</span>
-              </h2>
-            </div>
-          </div>
-          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-02.jpg" alt="">
-          <div class="product-item-description d-flex ml-auto">
-            <div class="bg-faded p-5 rounded">
-              <p class="mb-0">Our seasonal menu features delicious snacks, baked goods, and even full meals perfect for breakfast or lunchtime. We source our ingredients from local, oragnic farms whenever possible, alongside premium vendors for specialty goods.</p>
-              <div class="intro-button mx-auto">
-              	<a class="btn btn-primary btn-xl" href="#">j'aime</a>
-              </div>
-              <br /> 
-              <div class="intro-button mx-auto">
-              	<a class="btn btn-primary btn-xl" href="#">S'abonner</a>
-              </div>              
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-section">
-      <div class="container">
-        <div class="product-item">
-          <div class="product-item-title d-flex">
-            <div class="bg-faded p-5 d-flex ml-auto rounded">
-              <h2 class="section-heading mb-0">
-                <span class="section-heading-upper">3eme pub</span>
-                <span class="section-heading-lower">Bulk Speciality Blends</span>
-              </h2>
-            </div>
-          </div>
-          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-03.jpg" alt="">
-          <div class="product-item-description d-flex mr-auto">
-            <div class="bg-faded p-5 rounded">
-              <p class="mb-0">Travelling the world for the very best quality coffee is something take pride in. When you visit us, you'll always find new blends from around the world, mainly from regions in Central and South America. We sell our blends in smaller to large bulk quantities. Please visit us in person for more details.</p>
-              <div class="intro-button mx-auto">
-              	<a class="btn btn-primary btn-xl" href="#">j'aime</a>
-              </div>
-              <br /> 
-              <div class="intro-button mx-auto">
-              	<a class="btn btn-primary btn-xl" href="#">s'abonner</a>
-              </div>              
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    
+</c:forEach>
     <footer class="footer text-faded text-center py-5">
       <div class="container">
         <p class="m-0 small">Copyright &copy; Your Website 2018</p>
@@ -163,5 +112,4 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
-
 </html>

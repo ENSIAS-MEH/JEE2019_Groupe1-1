@@ -1,7 +1,13 @@
-<%@ page pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,8 +35,8 @@
   <body>
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-upper text-primary mb-3">welcome</span>
-      <span class="site-heading-lower">hello</span>
+      <span class="site-heading-upper text-primary mb-3">nom createur</span>
+      <span class="site-heading-lower">page</span>
     </h1>
 
     <!-- Navigation -->
@@ -43,7 +49,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="#">Home
+              <a class="nav-link text-uppercase text-expanded" href="store1.html">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -54,16 +60,14 @@
               <a class="nav-link text-uppercase text-expanded" href="dashboard.html">Dashboard</a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="products2.html">explorer</a>
+              <a class="nav-link text-uppercase text-expanded" href="products.html">explorer</a>
             </li>            
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="user">mon profile</a>
+              <a class="nav-link text-uppercase text-expanded" href="user.html">mon profile</a>
             </li>
+
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="table.html">table list</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="deconnexion">se déconnecter</a>
+              <a class="nav-link text-uppercase text-expanded" href="#">se déconnecter</a>
             </li>            
             
           </ul>
@@ -71,44 +75,37 @@
       </div>
     </nav>
 
-    <section class="page-section clearfix">
-      <div class="container">
-        <div class="intro">
-          <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/intro.jpg" alt="">
-          <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-            <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">my page</span>
-              <span class="section-heading-lower">acceuil</span>
-            </h2>
-            <p class="mb-3">text descripitf
-            </p>
-            <div class="intro-button mx-auto">
-              <a class="btn btn-primary btn-xl" href="#">creer</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<c:forEach var="i" begin="0" end="${listPubs.size() - 1}" step="1">
 
-    <section class="page-section cta">
+    <section class="page-section">
       <div class="container">
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <div class="cta-inner text-center rounded">
-              <h2 class="section-heading mb-4">
-                <span class="section-heading-upper">Our Promise</span>
-                <span class="section-heading-lower">To You</span>
+        <div class="product-item">
+          <div class="product-item-title d-flex">
+            <div class="bg-faded p-5 d-flex ml-auto rounded">
+              <h2 class="section-heading mb-0">
+                <span class="section-heading-upper">${i + 1 }er pub</span>
+                <span class="section-heading-lower">${listPubs.get(i).getTitre() }</span>
               </h2>
-              <p class="mb-0">text !</p>
+            </div>
+          </div>
+          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-01.jpg" alt="">
+          <div class="product-item-description d-flex mr-auto">
+            <div class="bg-faded p-5 rounded">
+              <p class="mb-0">${listPubs.get(1).getDescription() }</p>
+              <div class="intro-button mx-auto">
+              	<a class="btn btn-primary btn-xl" href="http://${listPubs.get(i).getURL() }">consulter</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+</c:forEach>
+
 
     <footer class="footer text-faded text-center py-5">
       <div class="container">
-        <p class="m-0 small">Copyright &copy; ensias Website 2018</p>
+        <p class="m-0 small">Copyright &copy; Your Website 2018</p>
       </div>
     </footer>
 
@@ -119,3 +116,9 @@
   </body>
 
 </html>
+
+
+
+
+
+
