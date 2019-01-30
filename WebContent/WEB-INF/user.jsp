@@ -112,34 +112,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Team Members</h4>  <!--  donne les utilisateurs que je j'ai suivi et a la fois m ont suivi     -->
-                            </div>
-                            <div class="content">
-                                <ul class="list-unstyled team-members">
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-xs-3">
-                                                        <div class="avatar">
-                                                            <img src="assets/img/faces/face-0.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xs-6">
-                                                        DJ Khaled
-                                                        <br />
-                                                        
-                                                    </div>
-
-                                                    <div class="col-xs-3 text-right">
-                                                        <btn class="btn btn-sm btn-success btn-icon"><i class="fa fa-envelope"></i></btn>
-                                                    </div>
-                                                </div>
-                                            </li>
-
-                                        </ul>
-                            </div>
-                        </div>
+                        
                     </div>
                     <div class="col-lg-8 col-md-7">
                         <div class="card">
@@ -168,7 +141,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label> Nom</label>
-                                                <input type="text" class="form-control border-input" placeholder="Company" value="${sessionScope.sessionUtilisateur.adresse}">
+                                                <input type="text" class="form-control border-input" placeholder="Company" value="${sessionScope.sessionUtilisateur.nom}">
                                             </div>
                                         </div>
                                         
@@ -227,15 +200,13 @@
 
                         <li>
                             <a href="http://www.ensias.com">
-                                Creative Tim
+                                Creative TRIO
                             </a>
                         </li>
 
                     </ul>
                 </nav>
-				<div class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative Tim</a>
-                </div>
+				
             </div>
         </footer>
 
