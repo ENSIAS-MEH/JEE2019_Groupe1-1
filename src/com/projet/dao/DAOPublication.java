@@ -136,5 +136,28 @@ public class DAOPublication {
 		
 		
 	}
+	
+public int argent(int idUser ) {
+		
+		String sqlRequest = "select count(*) as res from postes where id_posteur = ?" ;
+		int ben =0;
+		try {
+			Class.forName("com.mysql.jdbc.Driver") ;
+			Connection con = DriverManager.getConnection(url,username,password) ;
+			PreparedStatement st = con.prepareStatement(sqlRequest) ;
+			st.setInt(1, idUser);
+
+			ResultSet rs =st.executeQuery() ;
+			if(rs.next()){
+				ben = rs.getInt("res");
+				
+				
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return ben;
+		
+	}
 
 }

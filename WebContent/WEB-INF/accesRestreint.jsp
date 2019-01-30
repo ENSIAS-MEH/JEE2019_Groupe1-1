@@ -47,11 +47,9 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
+                   
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="/JEE2019_Groupe1-1/pagecreateurVrai.jsp">ma page</a>
-            </li>            
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="dashboard.html">Dashboard</a>
+              <a class="nav-link text-uppercase text-expanded" href="/JEE2019_Groupe1-1/dashboard">Dashboard</a>
             </li>
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="/JEE2019_Groupe1-1/plusieursutilisateur">explorer</a>

@@ -120,7 +120,7 @@
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Revenue</p>
-                                            $1,345
+                                            ${sessionScope.benef_ATT} $
                                         </div>
                                     </div>
                                 </div>
