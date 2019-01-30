@@ -90,12 +90,12 @@
                             <div class="content">
                                 <div class="author">
                                   <img class="avatar border-white" src="assets/img/faces/face-2.jpg" alt="..."/>
-                                  <h4 class="title">Chet Faker<br />
+                                  <h4 class="title">${sessionScope.sessionUtilisateur.nom}<br />
                  
                                   </h4>
                                 </div>
                                 <p class="description text-center">
-                                    "la description de l'utilisateur<br>
+                                   ${sessionScope.sessionUtilisateur.about_me}<br>
                                     
                                 </p>
                             </div>
@@ -153,7 +153,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Pseudo</label>
-                                                <input type="text" class="form-control border-input" placeholder="Username" >
+                                                <input type="text" class="form-control border-input" placeholder="Username" value="${sessionScope.sessionUtilisateur.pseudo}" >
                                             </div>
                                         </div>
                                         <div class="col-md-4">
@@ -168,7 +168,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label> Nom</label>
-                                                <input type="text" class="form-control border-input" placeholder="Company" value="Chet">
+                                                <input type="text" class="form-control border-input" placeholder="Company" value="${sessionScope.sessionUtilisateur.adresse}">
                                             </div>
                                         </div>
                                         
@@ -178,7 +178,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Address</label>
-                                                <input type="text" class="form-control border-input" placeholder="Home Address" value="Melbourne, Australia">
+                                                <input type="text" class="form-control border-input" placeholder="Home Address" value="${sessionScope.sessionUtilisateur.adresse}">
                                             </div>
                                         </div>
                                     </div>
@@ -187,14 +187,14 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Pays</label>
-                                                <input type="text" class="form-control border-input" placeholder="City" value="Melbourne">
+                                                <input type="text" class="form-control border-input" placeholder="Pays" value="${sessionScope.sessionUtilisateur.pays}">
                                             </div>
                                         </div>
                             
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Postal Code</label>
-                                                <input type="number" class="form-control border-input" placeholder="ZIP Code">
+                                                <input type="number" class="form-control border-input" placeholder="ZIP Code" value="${sessionScope.sessionUtilisateur.code_postal}">
                                             </div>
                                         </div>
                                     </div>
@@ -203,13 +203,11 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>About Me</label>
-                                                <textarea rows="5" class="form-control border-input" placeholder="Here can be your description" value="Mike">description de l'utilisateur</textarea>
+                                                <textarea rows="5" class="form-control border-input" placeholder="Here can be your description" value="Mike">${sessionScope.sessionUtilisateur.about_me}</textarea>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text-center">
-                                        <button type="submit" class="btn btn-info btn-fill btn-wd">Update Profile</button>
-                                    </div>
+                                    
                                     <div class="clearfix"></div>
                                 </form>
                             </div>

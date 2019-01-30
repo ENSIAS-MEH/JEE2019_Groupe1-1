@@ -33,11 +33,27 @@ public class UserDao {
 		    String emailUtilisateur = rs.getString( "email" );
 		    String motDePasseUtilisateur = rs.getString( "mot_de_passe" );
 		    String nomUtilisateur = rs.getString( "nom" );
+		    String pseudoUtilisateur = rs.getString( "pseudo" );
+		    String adresseUtilisateur = rs.getString( "adresse" );
+		    String paysUtilisateur = rs.getString( "pays" );
+		    String code_postalUtilisateur = rs.getString( "code_postal" );
+		    String type_contenuUtilisateur = rs.getString( "type_contenu" );
+		    String lienUtilisateur = rs.getString( "lien" );
+		    String about_meUtilisateur = rs.getString( "about_me" );
+
+
 		    user =new Utilisateur();
 		    user.setEmail(emailUtilisateur);
 		    user.setId(idUtilisateur);
 		    user.setNom(nomUtilisateur);
 		    user.setMotDePasse(motDePasseUtilisateur);
+		    user.setAbout_me(about_meUtilisateur);
+		    user.setAdresse(adresseUtilisateur);
+		    user.setCode_postal(code_postalUtilisateur);
+		    user.setLien(lienUtilisateur);
+		    user.setType_contenu(type_contenuUtilisateur);
+		    user.setPays(paysUtilisateur);
+		    user.setPseudo(pseudoUtilisateur);
 		    
 		   }
 		}catch (Exception e) {

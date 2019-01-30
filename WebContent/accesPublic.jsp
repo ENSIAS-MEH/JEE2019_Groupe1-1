@@ -50,7 +50,7 @@
               <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="products.html">Projets</a>
+              <a class="nav-link text-uppercase text-expanded" href="/JEE2019_Groupe1-1/plusieursutilisateur">Projets</a>
             </li>
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="inscription">Inscription</a>

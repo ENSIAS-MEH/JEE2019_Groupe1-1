@@ -42,28 +42,30 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="index.html">Home
+            <li class="nav-item active px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="store1.html">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
-            </li>
-            <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="products.html">projets</a>
+              <a class="nav-link text-uppercase text-expanded" href="pagecreateur.html">ma page</a>
+            </li>            
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="dashboard.html">Dashboard</a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="store.html">s'inscrir</a>
+              <a class="nav-link text-uppercase text-expanded" href="/JEE2019_Groupe1-1/plusieursutilisateur">explorer</a>
+            </li>            
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/JEE2019_Groupe1-1/user">mon profile</a>
             </li>
+            
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/JEE2019_Groupe1-1/deconnexion">se déconnecter</a>
+            </li>            
+            
           </ul>
         </div>
-          <form class="navbar-form navbar-right inline-form">
-            <div class="form-group">
-               <input type="search" class="input-sm form-control" placeholder="Recherche">
-               <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Chercher</button>
-            </div>
-          </form>        
       </div>
     </nav>
  <c:forEach var="i" begin="0" end="${listspPosts.size() - 1}" step="1">

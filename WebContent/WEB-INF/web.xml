@@ -44,9 +44,21 @@
     <servlet-name>Myservlet1</servlet-name>
     <servlet-class>com.projet.servlets.Myservlet1</servlet-class>
   </servlet>
+  
+  <servlet>
+    <servlet-name>Dashboard</servlet-name>
+    <servlet-class>com.projet.servlets.Dashboard</servlet-class>
+  </servlet>
+  
   <listener>
     <listener-class>com.projet.config.InitialisationDaoFactory</listener-class>
   </listener>
+  
+  <servlet-mapping>
+    <servlet-name>Dashboard</servlet-name>
+    <url-pattern>/dashboard</url-pattern>
+  </servlet-mapping>
+  
   <servlet-mapping>
     <servlet-name>Myservlet1</servlet-name>
     <url-pattern>/myservlet1</url-pattern>

@@ -59,9 +59,7 @@
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="/JEE2019_Groupe1-1/user">mon profile</a>
             </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="table.html">table list</a>
-            </li>
+           
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="/JEE2019_Groupe1-1/deconnexion">se déconnecter</a>
             </li>            
