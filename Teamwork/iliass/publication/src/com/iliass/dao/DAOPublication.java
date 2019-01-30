@@ -100,5 +100,41 @@ public class DAOPublication {
 		
 		
 	}
+	
+	
+	public void addPost( int id_Posteur, String titre, String Desc , String URL) {
+		String sqlAddPost = "insert into Postes(id_posteur, Titre, Description,URL) values(?,?,?,?)" ;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver") ;
+			Connection con = DriverManager.getConnection(url,username,password) ;
+			PreparedStatement st = con.prepareStatement(sqlAddPost) ;
+			st.setInt(1, id_Posteur);
+			st.setString(2, titre);
+			st.setString(3, Desc);
+			st.setString(4, URL);
+			int status = st.executeUpdate() ;
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+	
+	public void userSubUser(int id_Posteur ,int id_abonne) {
+		String sqlSubUser = "insert into Sabonner(id_posteur,id_abonne) values (?,?)" ;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver") ;
+			Connection con = DriverManager.getConnection(url,username,password) ;
+			PreparedStatement st = con.prepareStatement(sqlSubUser) ;
+			st.setInt(1, id_Posteur);
+			st.setInt(2, id_abonne);
+			int status = st.executeUpdate() ;
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
+	}
 
 }

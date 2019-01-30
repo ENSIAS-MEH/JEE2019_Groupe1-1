@@ -46,7 +46,7 @@ public class ShowPubs extends HttpServlet {
 	     
 	     DAOPublication daoPublication = new DAOPublication() ;
 	     
-	     List<Publication> list = daoPublication.getAllPosts() ;
+	     List<Publication> list = daoPublication.getSpecificPoste(2) ;
 		
  		HttpSession session = request.getSession() ;
  		session.setAttribute("list", list);

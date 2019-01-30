@@ -26,12 +26,13 @@ public class ShowPagecreateur extends HttpServlet {
 		
 		
 		DAOPublication daoPublication = new DAOPublication() ;
-	     
-	    List<Publication> listPubs = daoPublication.getAllPosts() ;
+		HttpSession session = request.getSession() ;
+		int id_connexion = (int) session.getAttribute("idconnexion") ;
+	    List<Publication> listPubs = daoPublication.getSpecificPoste(id_connexion) ;
 	    
 	     
 	    
-	    HttpSession session = request.getSession() ;
+	    
  		session.setAttribute("listPubs", listPubs);
  		
 		response.sendRedirect("pagecreateur.jsp");
