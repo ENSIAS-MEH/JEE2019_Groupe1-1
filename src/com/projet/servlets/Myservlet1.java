@@ -11,9 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.projet.beans.Publication;
+import com.projet.beans.Utilisateur;
 import com.projet.dao.DAOPublication;
 
-public class Myservlet extends HttpServlet {
+public class Myservlet1 extends HttpServlet {
     
     public static final String ACCES_PAGE    = "/pagecreateurconsult.jsp";
     
@@ -21,11 +22,12 @@ public class Myservlet extends HttpServlet {
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
         /* Récupération et destruction de la session en cours */
         HttpSession session = request.getSession();
-        int paramId = Integer.parseInt(request.getParameter("add"));
-        
+        int paramId = Integer.parseInt(request.getParameter("numpub"));
+        String sessionUser= (String)session.getAttribute("idString");
+        int param = Integer.parseInt(sessionUser);
         DAOPublication daopublication = new DAOPublication();
-        List<Publication> listspPosts = daopublication.getSpecificPoste(paramId) ;
-        session.setAttribute( "listspPosts", listspPosts );
+        daopublication.addUserLikePost(param, paramId);
+      
         
       
 

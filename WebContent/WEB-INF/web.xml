@@ -40,9 +40,17 @@
     <servlet-class>com.projet.servlets.Myservlet</servlet-class>
   </servlet>
   
+  <servlet>
+    <servlet-name>Myservlet1</servlet-name>
+    <servlet-class>com.projet.servlets.Myservlet1</servlet-class>
+  </servlet>
   <listener>
     <listener-class>com.projet.config.InitialisationDaoFactory</listener-class>
   </listener>
+  <servlet-mapping>
+    <servlet-name>Myservlet1</servlet-name>
+    <url-pattern>/myservlet1</url-pattern>
+  </servlet-mapping>
    <servlet-mapping>
     <servlet-name>Myservlet</servlet-name>
     <url-pattern>/myservlet</url-pattern>
