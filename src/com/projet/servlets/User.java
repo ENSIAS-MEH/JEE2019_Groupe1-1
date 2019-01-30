@@ -22,7 +22,8 @@ public class User extends HttpServlet {
     public static final String CONF_DAO_FACTORY = "daofactory";
     public static final String ATT_USER         = "utilisateur";
     public static final String ATT_FORM         = "form";
-   
+    public static final String ATT_STRING       = "idString";
+
     
     private Utilisateur utilisateur;
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
@@ -32,6 +33,8 @@ public class User extends HttpServlet {
     	String emailUtilisateur = sessionUser.getEmail();
     	UserDao dao = new UserDao();
         utilisateur = dao.Renvoi(emailUtilisateur);
+        String numberAsString = Long.toString(utilisateur.getId());
+        
         
 
         
@@ -43,6 +46,8 @@ public class User extends HttpServlet {
             /* Redirection vers la page publique */
         	request.setAttribute( ATT_USER, utilisateur );
         	session.setAttribute( ATT_SESSION_USER, utilisateur );
+        	session.setAttribute( ATT_STRING, numberAsString );
+
         	this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
       
           

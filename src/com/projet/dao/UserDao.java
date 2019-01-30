@@ -38,6 +38,7 @@ public class UserDao {
 		    user.setId(idUtilisateur);
 		    user.setNom(nomUtilisateur);
 		    user.setMotDePasse(motDePasseUtilisateur);
+		    
 		   }
 		}catch (Exception e) {
 			e.printStackTrace();

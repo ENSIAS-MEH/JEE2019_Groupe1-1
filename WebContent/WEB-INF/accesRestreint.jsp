@@ -48,22 +48,22 @@
               </a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="pagecreateur.html">ma page</a>
+              <a class="nav-link text-uppercase text-expanded" href="/JEE2019_Groupe1-1/pagecreateurVrai.jsp">ma page</a>
             </li>            
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="dashboard.html">Dashboard</a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="products2.html">explorer</a>
+              <a class="nav-link text-uppercase text-expanded" href="/JEE2019_Groupe1-1/plusieursutilisateur">explorer</a>
             </li>            
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="user">mon profile</a>
+              <a class="nav-link text-uppercase text-expanded" href="/JEE2019_Groupe1-1/user">mon profile</a>
             </li>
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="table.html">table list</a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="deconnexion">se déconnecter</a>
+              <a class="nav-link text-uppercase text-expanded" href="/JEE2019_Groupe1-1/deconnexion">se déconnecter</a>
             </li>            
             
           </ul>
@@ -80,8 +80,41 @@
               <span class="section-heading-upper">my page</span>
               <span class="section-heading-lower">acceuil</span>
             </h2>
-            <p class="mb-3">text descripitf
-            </p>
+         <form action="" method="post" enctype="multipart/form-data">
+        
+        <div class="form-group">
+        </div>
+         
+        <div class="form-group">
+             <input type="text" class="form-input" name="titre"  placeholder="titre pub"/>
+        </div>
+        <br /> 
+           <p>
+             
+             <textarea name="ameliorer" id="ameliorer" placeholder="Exprimez vous"></textarea>
+           </p>
+         <br />  
+           
+            <fieldset>
+                <br />
+
+                <label for="fichier">Emplacement du fichier <span class="requis">*</span></label>
+                <input type="file" id="fichier" name="fichier" />
+                <br />
+                                
+            </fieldset>
+            <br />
+            <input type="url" placeholder="http://" />
+             <p>
+       qui peut voir la pub<br />
+            <input type="radio" name="rad" value="priv" id="priv" /> <label for="priv">Seuls abonnés</label><br />
+            <input type="radio" name="rad" value="pub" id="pub" /> <label for="priv">Tout le monde</label><br />
+       
+             </p>
+             
+             
+            
+        </form> 
             <div class="intro-button mx-auto">
               <a class="btn btn-primary btn-xl" href="#">creer</a>
             </div>
